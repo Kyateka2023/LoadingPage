@@ -72,7 +72,7 @@ h1
     animation-direction: normal;
 }
 
-#firstButton:hover, #firstButtonback:hover
+#firstButton:hover, #firstButtonback:hover,  #firstButton:active, #firstButtonback:active
 {
     background-image: linear-gradient(30deg, #0d1821 50%, #344966 50%);
     cursor: pointer;
