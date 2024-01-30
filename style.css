@@ -1,0 +1,134 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    height: 100dvh;
+    background-color: #f0f4ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+#first
+{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #bfcc94;
+    box-shadow: 3px 3px 3px black;
+}
+
+h1
+{
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 2rem;
+    width: 100%;
+}
+
+#firstButton, #firstButtonback
+{
+    width: 20rem;
+    height: 5rem;
+    margin: 2rem;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    border: transparent 2px solid;
+    border-top:  white solid 2px;
+    border-left:  white solid 2px;
+    outline: none;
+    background-image: linear-gradient(-30deg, #0d1821 50%, #344966 50%);
+    color: whitesmoke;
+    animation-name: button;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+.loading-screen
+{
+    padding: 2rem;
+    border-radius: 50%;
+    border-top: #98473e;
+    border-right: #98473e;
+    border-bottom: transparent;
+    border-left: transparent;
+    animation-name: rotateth;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+#firstButton:hover, #firstButtonback:hover
+{
+    background-image: linear-gradient(30deg, #0d1821 50%, #344966 50%);
+    cursor: pointer;
+}
+
+@keyframes rotateth
+{
+    0%
+    {
+        border-top: #98473e 2px solid;
+        border-right: #98473e 2px solid;
+        border-left: transparent;
+        border-bottom: transparent;
+    }
+
+    100%
+    {
+        border-bottom: #98473e 2px solid;
+        border-left: #98473e 2px solid;
+        border-top: transparent;
+        border-right: transparent;
+    }
+}
+
+@keyframes  button
+{
+    0%
+    {
+        border-top:  white solid 2px;
+        border-left:  white solid 2px;
+    }
+
+    100%
+    {
+        border-bottom:  white solid 2px;
+        border-right:  white solid 2px;
+        border-top:  none;
+        border-left:  none;
+    }
+}
+
+@media screen and (max-width: 480px)
+{
+    h1
+    {
+        font-size: 1rem;
+    }
+
+    #first
+    {
+        width: 100%;
+    }
+
+    #firstButton, #firstButtonback
+    {
+        height: 5rem;
+        width: 100%;
+    }
+}
